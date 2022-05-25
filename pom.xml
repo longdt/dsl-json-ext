@@ -6,7 +6,7 @@
 
     <groupId>com.github.longdt</groupId>
     <artifactId>dsl-json-ext</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
 
     <name>Dsl-Json Extension</name>
@@ -58,9 +58,8 @@
     <dependencies>
         <dependency>
             <groupId>com.dslplatform</groupId>
-            <artifactId>dsl-json</artifactId>
+            <artifactId>dsl-json-java8</artifactId>
             <version>${dsl-json.version}</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
