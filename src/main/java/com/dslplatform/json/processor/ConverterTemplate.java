@@ -641,8 +641,8 @@ class ConverterTemplate {
             String prefix = isFirst ? "" : ",";
             isFirst = false;
             code.append("\t\tprivate static final byte[] quoted_").append(attr.name).append(" = \"").append(prefix);
-            code.append("\\\"").append(si.serializedNames.get(attr.id)).append("\\\":\".getBytes(utf8);\n");
-            code.append("\t\tprivate static final byte[] name_").append(attr.name).append(" = \"").append(si.serializedNames.get(attr.id)).append("\".getBytes(utf8);\n");
+            code.append("\\\"").append(si.serializedNames.getOrDefault(attr.id, attr.id)).append("\\\":\".getBytes(utf8);\n");
+            code.append("\t\tprivate static final byte[] name_").append(attr.name).append(" = \"").append(si.serializedNames.getOrDefault(attr.id, attr.id)).append("\".getBytes(utf8);\n");
         }
         code.append("\t\tpublic final void write(final com.dslplatform.json.JsonWriter writer, final ");
         code.append(className).append(" instance) {\n");

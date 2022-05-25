@@ -1,14 +1,18 @@
 package model;
 
 import com.dslplatform.json.CompiledJson;
+import com.dslplatform.json.JsonAttribute;
 import com.dslplatform.json.processor.MinifiedNaming;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.longdt.dsljson.SnakeCaseNaming;
 
 @CompiledJson(namingStrategy = SnakeCaseNaming.class)
 public class Order {
     private Long id;
+    @JsonAttribute(name = "sc")
     private String serviceCode;
     private String serviceName;
+    @JsonProperty("desc")
     private String description;
 
     public Long getId() {

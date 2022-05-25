@@ -26,7 +26,5 @@ public class JsonTest {
         System.out.println(stream.toString(StandardCharsets.UTF_8));
         var order1 = dslJson.deserialize(Order.class, new ByteArrayInputStream(stream.toByteArray()));
         System.out.println(order1);
-        order1 = dslJson.deserialize(Order.class, new ByteArrayInputStream("{\"service_name\":\"Fast\",\"id\":1,\"description\":\"Fast delivery\",\"service_code\":\"F\"}".getBytes(StandardCharsets.UTF_8)));
-        System.out.println(order1);
     }
 }
